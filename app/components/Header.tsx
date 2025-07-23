@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="w-full flex flex-col md:flex-row items-center justify-between gap-8 py-12">
+    <header className="w-full flex flex-col md:flex-row items-center justify-between mt-6 gap-8 py-12">
       {/* Image de profil temporaire */}
       <div className="flex-shrink-0">
-        <div className="w-40 h-40 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden">
+        <div className="w-120 h-120 rounded-full flex items-center justify-center overflow-hidden">
           {/* Remplace cette image par la tienne */}
-          <Image src="/profile-placeholder.png" alt="Photo de Wilky Syndick" width={160} height={160} />
+          <Image src="/assets/self.png" alt="Photo de Wilky Syndick" width={480} height={480} />
         </div>
       </div>
       <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-4">

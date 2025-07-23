@@ -10,7 +10,7 @@ import Workflow from "./components/Workflow";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#101c1c] text-white font-sans">
+    <div className="min-h-screen font-sans">
       <Navbar />
       <Header />
       <Trivia />
