@@ -1,0 +1,3 @@
+import type { SVGProps } from "react";
+const Blob2 = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width={900} height={600} {...props}><path fill="#255a69" d="M595.745 178.243c25 41 25.5 90.5 19.5 134s-18.5 81-43.5 115.6c-25 34.7-62.5 66.5-111 77.5-48.4 11-107.8 1-137.3-33.6-29.5-34.7-29.1-94.1-34.8-159.2-5.6-65-17.3-135.7 12.2-176.7s100.2-52.3 160.3-41.7 109.6 43.1 134.6 84.1" /></svg>;
+export default Blob2;

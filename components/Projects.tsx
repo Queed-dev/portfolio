@@ -21,7 +21,7 @@ const projects = [
 export default function Projects() {
   return (
     <section className="w-full py-12 flex flex-col items-center gap-8">
-      <h2 className="text-2xl md:text-3xl font-bold mb-4">Mes projets récents</h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-linear-120 from-orange-400 to-orange-600 bg-clip-text text-transparent">Mes projets récents</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
         {projects.map((project, idx) => (
           <div key={idx} className="bg-[#1a2a2a] rounded-xl p-4 flex flex-col items-center gap-3 shadow-lg">
