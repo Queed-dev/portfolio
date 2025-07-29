@@ -4,10 +4,11 @@ import {Text, Button} from "@radix-ui/themes";
 
 const links = [
   { href: "#", label: "Accueil" },
+  { href: "#skills", label: "Compétences" },
   { href: "#services", label: "Services" },
   { href: "#about", label: "À propos" },
-  { href: "#projects", label: "Projets" },
-  { href: "#contact", label: "Contact" },
+  // { href: "#projects", label: "Projets" },
+  // { href: "#contact", label: "Contact" },
 ];
 
 export default function Navbar() {

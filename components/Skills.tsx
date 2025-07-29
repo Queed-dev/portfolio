@@ -8,7 +8,7 @@ export default function Skills() {
     { name: "TypeScript", value: 89 },
   ];
   return (
-    <section className="w-full py-12 flex flex-col items-center gap-8">
+    <section id="skills" className="w-full py-12 flex flex-col items-center gap-8">
       <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-linear-120 from-orange-400 to-orange-600 bg-clip-text text-transparent">Compétences</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
         {skills.map((skill) => (
