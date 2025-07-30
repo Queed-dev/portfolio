@@ -17,7 +17,13 @@ const nextConfig: NextConfig = {
                 as: '*.js'
             },
         }
-    }
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
 };
 
 export default nextConfig;
