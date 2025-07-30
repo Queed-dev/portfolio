@@ -17,7 +17,7 @@ import { Flex } from "@radix-ui/themes";
 export default function Home() {
   return (
       <BackgroundBeamsWithCollision>
-        <div className="min-h-screen bg-linear-to-b from-[#ffffff] via-[#134c63] to-[#000000] font-sans">
+        <div className="min-h-screen overflow-x-hidden bg-linear-to-b from-[#ffffff] via-[#134c63] to-[#000000] font-sans">
             <div className="relative z-20">
                 <Navbar />
                 <Header />
@@ -97,10 +97,10 @@ export default function Home() {
                   {/* <Trivia /> */}
                   <Services />
                   <Skills />
-                  {/* <About /> */}
+                  <About />
                   {/* <Workflow /> */}
-                  {/* <Projects /> */}
-                  {/* <Contact /> */}
+                  <Projects />
+                  <Contact />
                 </div>
             </div>
         </div>
