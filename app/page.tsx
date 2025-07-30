@@ -16,7 +16,7 @@ import { Flex } from "@radix-ui/themes";
 
 export default function Home() {
   return (
-      // <div className={"w-[100vw] min-h-screen overflow-x-hidden"}>
+      <div className={"w-[100vw] min-h-screen overflow-x-hidden"}>
           <BackgroundBeamsWithCollision className={"w-[100vw]"}>
             <div className="w-[100vw] overflow-x-hidden bg-linear-to-b from-[#ffffff] via-[#134c63] to-[#000000] font-sans">
                 <div className="relative z-20">
@@ -31,13 +31,14 @@ export default function Home() {
                         header={
                           <div className="pt-9 px-6 md:px-10">
                             <h2 className="text-lg md:text-4xl mb-2 text-semibold text-white dark:text-white max-w-4xl">
-                              Changelog from my works journey
+                                Journal des modifications de mon parcours professionnel
                             </h2>
                             <p className="w-full text-neutral-400 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-                              Since my second year of university, I have been actively involved in various projects and roles, ranging from freelance work to teaching.
+                                Depuis ma deuxième année d’université,
+                                j’ai été activement impliqué dans divers projets et rôles, allant du travail indépendant à l’enseignement.
                             </p>
                             <p className="w-full text-neutral-400 pt-4">
-                              Here’s a timeline of my journey:
+                                Voici une chronologie de mon voyage :
                             </p>
                           </div>
                         }
@@ -108,6 +109,6 @@ export default function Home() {
                 </div>
             </div>
           </BackgroundBeamsWithCollision>
-      // </div>
+      </div>
   );
 }

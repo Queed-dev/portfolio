@@ -1,6 +1,8 @@
 "use client";
 import {useState} from "react";
 import Image from "next/image";
+import {Accordion, AccordionItem} from "@heroui/accordion";
+import {Chip} from "@heroui/chip";
 
 const projects = [
   {
@@ -80,30 +82,39 @@ function ApplicationPreview({image}: {image: string}){
 
 export default function Projects() {
   const [currentProject, setProject] = useState(projects[0]);
+  const colors = [
+      "bg-indigo-200", "bg-orange-200", "bg-green-200", "bg-red-100",
+      "bg-amber-200", "bg-purple-100"
+  ];
   return (
     <section id="projects" className="w-full py-12 flex flex-col items-center gap-8">
       <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-linear-120 from-orange-400 to-orange-600 bg-clip-text text-transparent">Mes projets récents</h2>
       <div className="flex flex-2/3 flex-col gap-2 md:flex-row w-full">
-        <div className="flex w-full px-1 md:px-8">
+        <div className="flex flex-col w-full px-1 md:px-8">
             <div className={`w-full sticky top-10 ${currentProject.type == 'website' ? 'h-[25vh]' : 'h-[50vh]'} md:h-[70vh] flex justify-center`}>
               {currentProject.type == "website" && <WebsitePreview image={currentProject.image}/>}
               {currentProject.type == "application" && <ApplicationPreview image={currentProject.image}/>}
             </div>
         </div>
-        <div className="flex flex-1/3 flex-col gap-2 w-full max-w-5xl">
+        <Accordion className={"flex flex-1/3 flex-col gap-2 w-full max-w-5xl"}>
           {projects.map((project, idx) => (
-          <div className="w-full flex flex-col gap-2 relative cursor-pointer">
-            <div key={idx} className={`p-2 rounded-md ${currentProject.title == project.title ? "bg-[#1a2a2a]" : ""}`}
-              onClick={()=>{
-                setProject(project);
-              }}
-            >
-              {currentProject.title == project.title && <div className="w-[1px] h-[1px] bg-white absolute rounded-full top-[50%] left-[-1em]" style={{boxShadow: '0 0 8px 6px white'}}/>}
-              <h3 className={` ${currentProject.title == project.title ? 'text-white text-lg': 'text-slate-200/50 text-md'}`}>{project.title}</h3>
-            </div>
-          </div>
-        ))}
-        </div>
+              <AccordionItem
+                  key={idx}
+                  title={project.title}
+                  className="w-full flex flex-col gap-2 relative cursor-pointer text-white text-left"
+                  onPress={() => setProject(project)}
+              >
+                  <p className={'font-light text-sm'}>
+                      {project.description}
+                  </p>
+                  <div className="flex p-2 flex-wrap gap-1">
+                      {currentProject.utils.map((lang, index) => (
+                          <Chip color="success" variant={"solid"} className={`text-sm text-black ${colors[index % colors.length]}`}>{lang}</Chip>
+                      ))}
+                  </div>
+              </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );

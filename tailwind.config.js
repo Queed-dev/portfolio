@@ -1,3 +1,4 @@
+const {heroui} = require('@heroui/theme');
 // const {heroui} = require("@heroui/theme");
 const {
 	default: flattenColorPalette,
@@ -5,10 +6,12 @@ const {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  plugins: [heroui()],
   content: [
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './svg/**/*.{js,ts,jsx,tsx,mdx}',
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./svg/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@heroui/theme/dist/components/(accordion|chip|divider).js"
   ],
   theme: {
   	extend: {
