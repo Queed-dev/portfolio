@@ -12,7 +12,6 @@ import { Timeline } from "@/components/ui/timeline";
 import TimelineItem  from "@/components/ui/timeline-item";
 import Wave1 from "@/svg/react/wave1";
 import Wave2 from "@/svg/react/wave2";
-import { Flex } from "@radix-ui/themes";
 
 export default function Home() {
   return (

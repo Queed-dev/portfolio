@@ -26,11 +26,12 @@ export default function Navbar() {
               </a>
           ))}
         </div>
-        <a href="#contact" className="hidden md:inline-block">
-          <Button color="orange" radius="full" className="p-4 hidden md:flex items-center justify-center px-6 py-2 rounded-full bg-gradient-to-r from-orange-400 to-[#033] text-white font-semibold hover:bg-green-300 transition">
-            Download my CV
-          </Button>
-        </a>
+        <div className={"w-10"}/>
+        {/*<a href="#contact" className="hidden md:inline-block">*/}
+        {/*  <Button color="orange" radius="full" className="p-4 hidden md:flex items-center justify-center px-6 py-2 rounded-full bg-gradient-to-r from-orange-400 to-[#033] text-white font-semibold hover:bg-green-300 transition">*/}
+        {/*    Download my CV*/}
+        {/*  </Button>*/}
+        {/*</a>*/}
         {/* Mobile burger */}
         <button className="md:hidden flex flex-col gap-1" onClick={() => setOpen(!open)} aria-label="Ouvrir le menu">
           <span className="w-6 h-0.5 bg-white rounded"/>
