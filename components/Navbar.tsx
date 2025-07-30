@@ -19,9 +19,9 @@ export default function Navbar() {
         <a href="#" className="text-xl md:text-2xl font-bold mix-blend-difference text-orange-400">
           Wilky Syndick
         </a>
-        <div className="hidden md:flex gap-8 items-center bg-[#dcdcdc]/80 p-3 px-6 rounded-full">
+        <div className="hidden md:flex gap-8 items-center bg-[#192c2c]/70 p-3 px-6 rounded-full">
           {links.map((link) => (
-              <a key={link.href} href={link.href} className="text-slate-800 hover:text-primary transition font-medium">
+              <a key={link.href} href={link.href} className="text-slate-100 hover:text-primary transition font-medium">
                 <Text>{link.label}</Text>
               </a>
           ))}

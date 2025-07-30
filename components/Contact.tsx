@@ -1,4 +1,4 @@
-import { Text, Button } from "@radix-ui/themes";
+import {Mail01Icon, HugeiconsIcon, TelephoneIcon} from "hugeicons-react";
 
 export default function Contact() {
   return (
@@ -17,41 +17,45 @@ export default function Contact() {
             je vous prie de les sauvegarder pour tout contact.
           </p>
           <div className="w-full p-2 items-center gap-8 flex text-white">
-            <div className="w-[50px] h-[50px] bg-slate-600/60 rounded-full"></div>
+            <div className="w-[50px] h-[50px] bg-slate-600/60 rounded-full flex items-center justify-center">
+              <Mail01Icon/>
+            </div>
             <div className="flex flex-col p-2 gap-2">
               <span className="font-semibold text-lg">Email</span>
               <span className="text-md text-slate-400">wilkysynd@gmail.com</span>
             </div>
           </div>
           <div className="w-full p-2 items-center gap-8 flex text-white">
-            <div className="w-[50px] h-[50px] bg-slate-600/60 rounded-full"></div>
+            <div className="w-[50px] h-[50px] bg-slate-600/60 rounded-full flex items-center justify-center">
+              <TelephoneIcon/>
+            </div>
             <div className="flex flex-col p-2 gap-2">
               <span className="font-semibold text-lg">Téléphone</span>
               <span className="text-md text-slate-400">(+509) 46 25 2596 / 42 89 7628</span>
             </div>
           </div>
         </div>
-        <div className="flex p2 w-full items-center justify-center">
-          <form className="flex flex-col p-8 rounded-4xl gap-4 w-full max-w-md bg-white/5">
-            <Text className="font-light text-white/60">
-              Ou veuillez remplir ces champs et m'envoyer un message à mon espace personnel de Queed.
-            </Text>
-            <div className="w-full flex gap-2 flex-row">
-              <input type="text" placeholder="Nom" className="px-4 py-2 w-full rounded-lg bg-[#1a2a2a] text-white placeholder-gray-400 focus:outline-none" />
-              <input type="text" placeholder="Prénom" className="px-4 py-2 w-full rounded-lg bg-[#1a2a2a] text-white placeholder-gray-400 focus:outline-none" />
-            </div>
-            <div className="w-full flex gap-2 flex-row">
-              <input type="email" placeholder="Email" className="px-4 py-2 w-full rounded-lg bg-[#1a2a2a] text-white placeholder-gray-400 focus:outline-none" />
-              <input type="phone" placeholder="Numéro téléphone" className="px-4 w-full py-2 rounded-lg bg-[#1a2a2a] text-white placeholder-gray-400 focus:outline-none" />
-            </div>
-            <textarea placeholder="Votre message" rows={5} className="px-4 resize-none py-2 rounded-lg bg-[#1a2a2a] text-white placeholder-gray-400 focus:outline-none" />
-            <div>
-              <Button color="orange" radius="full" className="p-4 px-8 hidden md:flex items-center justify-center px-6 py-2 rounded-full bg-gradient-to-r from-orange-400 to-[#033] text-white font-semibold hover:bg-green-300 transition">
-                Envoyer le message
-              </Button>
-            </div>
-          </form>
-        </div>
+        {/*<div className="flex p2 w-full items-center justify-center">*/}
+        {/*  <form className="flex flex-col p-8 rounded-4xl gap-4 w-full max-w-md bg-white/5">*/}
+        {/*    <Text className="font-light text-white/60">*/}
+        {/*      Ou veuillez remplir ces champs et m'envoyer un message à mon espace personnel de Queed.*/}
+        {/*    </Text>*/}
+        {/*    <div className="w-full flex gap-2 flex-row">*/}
+        {/*      <input type="text" placeholder="Nom" className="px-4 py-2 w-full rounded-lg bg-[#1a2a2a] text-white placeholder-gray-400 focus:outline-none" />*/}
+        {/*      <input type="text" placeholder="Prénom" className="px-4 py-2 w-full rounded-lg bg-[#1a2a2a] text-white placeholder-gray-400 focus:outline-none" />*/}
+        {/*    </div>*/}
+        {/*    <div className="w-full flex gap-2 flex-row">*/}
+        {/*      <input type="email" placeholder="Email" className="px-4 py-2 w-full rounded-lg bg-[#1a2a2a] text-white placeholder-gray-400 focus:outline-none" />*/}
+        {/*      <input type="phone" placeholder="Numéro téléphone" className="px-4 w-full py-2 rounded-lg bg-[#1a2a2a] text-white placeholder-gray-400 focus:outline-none" />*/}
+        {/*    </div>*/}
+        {/*    <textarea placeholder="Votre message" rows={5} className="px-4 resize-none py-2 rounded-lg bg-[#1a2a2a] text-white placeholder-gray-400 focus:outline-none" />*/}
+        {/*    <div>*/}
+        {/*      <Button color="orange" radius="full" className="p-4 px-8 hidden md:flex items-center justify-center px-6 py-2 rounded-full bg-gradient-to-r from-orange-400 to-[#033] text-white font-semibold hover:bg-green-300 transition">*/}
+        {/*        Envoyer le message*/}
+        {/*      </Button>*/}
+        {/*    </div>*/}
+        {/*  </form>*/}
+        {/*</div>*/}
       </div>
     </section>
   );

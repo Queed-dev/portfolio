@@ -39,7 +39,7 @@ export const Timeline = ({ data, header, background = "bg-[#192c2c]", theme="pur
 
   return (
     <div
-      className={`w-full ${background} text-white dark:bg-neutral-950 font-sans md:px-10`}
+      className={`w-[100vw] ${background} text-white dark:bg-neutral-950 font-sans `}
       ref={containerRef}
     >
       {header}

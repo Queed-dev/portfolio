@@ -17,12 +17,11 @@ export default function About() {
       <div className="flex-1 flex flex-col gap-4">
         <h2 className="text-2xl font-bold bg-linear-120 from-orange-400 to-orange-600 bg-clip-text text-transparent">À propos de moi</h2>
         <p className="text-gray-300 text-base">
-          Experienced Web Developer with over 6 years of expertise in both client-side and
-          server-side programming. Highly creative and deeply focused on enhancing user
-          experience, he is committed to developing innovative and optimized solutions.
-          Passionate about sharing acquired knowledge, he enjoys mentoring and teaching.
-          His background in stock management has strengthened his conflict resolution skills,
-          teamwork abilities, and adaptability to a fast-paced environment.
+          Passionné par les technologies de l'information, je possède plus de 6 ans d'expérience
+          en technologie d’information et administration système. Curieux et rigoureux, je
+          conçois des solutions performantes et sécurisées tout en partageant mes
+          connaissances. Mon parcours m’a aussi permis de renforcer mes compétences en
+          résolution de problèmes et en travail d'équipe.
         </p>
         <ul className="flex gap-8 mt-2 text-sm text-gray-400">
           <li><span className="font-bold text-orange-400">6+</span> années d'expérience</li>
