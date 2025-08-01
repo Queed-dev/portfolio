@@ -29,7 +29,7 @@ const servicesData = [
 export default function Services() {
   return (
     <section id="services" className="w-[100vw] h-[80vh] overflow-x-hidden py-12 flex flex-col items-center gap-8">
-      <h2 className="text-2xl md:text-3xl font-bold bg-linear-120 from-orange-400 to-orange-600 bg-clip-text text-transparent">Mes services</h2>
+      <h2 className="text-2xl md:text-3xl font-bold bg-white/80 bg-clip-text text-transparent">Mes services</h2>
       <StickyScroll
           contentClassName={"items-start pt-5"}
         content={servicesData.map((service, index) => ({

@@ -4,14 +4,14 @@ import Services from "../components/Services";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
-import Trivia from "../components/Trivia";
 import Skills from "../components/Skills";
-import Workflow from "../components/Workflow";
 import {BackgroundBeamsWithCollision} from "@/components/ui/background-beams-with-collision";
 import { Timeline } from "@/components/ui/timeline";
 import TimelineItem  from "@/components/ui/timeline-item";
 import Wave1 from "@/svg/react/wave1";
 import Wave2 from "@/svg/react/wave2";
+import {default as worksExperience} from "@/datas/works-journey.json";
+import WorkJourney from "@/components/types/work-journey";
 
 export default function Home() {
   return (
@@ -41,55 +41,16 @@ export default function Home() {
                             </p>
                           </div>
                         }
-                        data={[
-                          {
-                            title: "Novembre 2024 — À nos jours",
-                            content:
-                            <TimelineItem
-                              fonction="Enseignant en informatique chez Haiti EdTech"
-                              town="Cap-Haïtien"
-                              responsibilities={[
-                                "Préparer des cours appropriés.",
-                                "Dispenser des cours d'informatique dans les établissements des différents partenaires de l’entreprise."
-                              ]}
-                            />
-                          },
-                          {
-                            title: "Mars 2022 — Août 2024",
-                            content: <TimelineItem
-                              fonction="Assistant SAP à M.A.S Akansyel"
-                              town="Caracol"
-                              responsibilities={[
-                                "Gestion des stocks via le système ERP SAP (Systems, Applications, and Products)",
-                                "Réconcilier le stock physique et le stock système afin d’éviter les écarts et les déficits financiers.",
-                                "Superviser les audits de stock pour l’usine"
-                              ]}
-                            />
-                          },
-                          {
-                            title: "Septembre 2020 — Juillet 2021",
-                            content: <TimelineItem
-                              fonction="Assistant enseignant en programmation Python chez Royal Linx Team du Collège Saint-Joseph de Cap-Haïtien"
-                              town="Cap-Haïtien"
-                              responsibilities={[
-                                "Apporter des connaissances et compétences à l’équipe en programmation Python",
-                                "Assister les étudiants dans leurs projets de programmation"
-                              ]}
-                            />
-                          },
-                          {
-                            title: "Août 2018 — Octobre 2020",
-                            content: <TimelineItem
-                              fonction="Développeur web chez PwAtik"
-                              town="Cap-Haïtien"
-                              responsibilities={[
-                                "Apporter des connaissances et compétences à l’équipe en programmation Python",
-                                "Assister les étudiants dans leurs projets de programmation"
-                              ]}
-                            />
-                          }
-                        ]}
-                      />
+                        data={ worksExperience.map((work : WorkJourney)=>({
+                          title: work.period,
+                          content: (
+                              <TimelineItem
+                                  fonction={work.position}
+                                  town={work.town}
+                                  responsibilities={work.responsibilities}
+                              />
+                          ),
+                      }))}/>
                       <div className="w-full mt-[-0.5em] h-[60px] flex items-start">
                         <Wave2 className="text-[#192c2c] fill-current"/>
                       </div>

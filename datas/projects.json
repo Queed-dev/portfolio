@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Akademy",
+        "description": "Une plateforme de gestion scolaire en ligne.",
+        "image": "/projects/akademy.png",
+        "type": "website",
+        "status": "on hold",
+        "framed": true,
+        "utils": ["Javascript", "PHP", "HTML 5", "MariaDB", "CSS 3"]
+    },
+    {
+        "title": "Queed platform",
+        "description": "Une plateforme de gestion du startup Queed.",
+        "image": "/projects/queed.png",
+        "type": "website",
+        "status": "completed",
+        "framed": true,
+        "utils": ["Nextjs", "NextUi", "Tailwind", "Mongodb"]
+    },
+    {
+        "title": "Tonnel",
+        "description": "Une application de lecture de média, développé pour Windows, Linux",
+        "image": "/projects/tonnel.png",
+        "type": "desktop",
+        "status": "on hold",
+        "framed": false,
+        "utils": ["React js", "Electronjs"]
+    },
+    {
+        "title": "Rap au top",
+        "description": "Une plateforme médiatique pour le média Muse au top, anciennement Rap au top",
+        "image": "/projects/rapautop.png",
+        "type": "website",
+        "status": "on hold",
+        "framed": true,
+        "utils": ["React js", "Mariadb", "Nodejs"]
+    },
+    {
+        "title": "Notebik",
+        "description": "Système de messagerie instantané cross-platform",
+        "image": "/projects/notebik.jpg",
+        "type": "application",
+        "status": "development",
+        "framed": true,
+        "utils": ["Dart/Flutter", "Rust", "ObjectBox"]
+    },
+    {
+        "title": "Wilky Syndick Portfolio",
+        "description": "Mon portfolio présentant mes travaux",
+        "image": "/projects/portfolio.png",
+        "type": "website",
+        "status": "completed",
+        "framed": true,
+        "utils": ["Nextjs", "Radix Ui", "Aceternity", "Tailwind"]
+    }
+]

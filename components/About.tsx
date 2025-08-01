@@ -15,7 +15,7 @@ export default function About() {
         </div>
       </div>
       <div className="flex-1 flex flex-col gap-4">
-        <h2 className="text-2xl font-bold bg-linear-120 from-orange-400 to-orange-600 bg-clip-text text-transparent">À propos de moi</h2>
+        <h2 className="text-2xl font-bold bg-white/80 bg-clip-text text-transparent">À propos de moi</h2>
         <p className="text-gray-300 text-base">
           Passionné par les technologies de l'information, je possède plus de 6 ans d'expérience
           en technologie d’information et administration système. Curieux et rigoureux, je

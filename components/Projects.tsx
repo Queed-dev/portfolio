@@ -3,67 +3,43 @@ import {useState} from "react";
 import Image from "next/image";
 import {Accordion, AccordionItem} from "@heroui/accordion";
 import {Chip} from "@heroui/chip";
+import {default as projects} from "@/datas/projects.json";
 
-const projects = [
-  {
-    title: "Akademy",
-    description: "C'est une plateforme de gestion scolaire en ligne.",
-    image: "/projects/portfolio.png",
-    type: "website",
-    status: "held",
-    utils: ["Javascript", "PHP", "HTML 5", "MariaDB", "CSS 3"]
-  },
-  {
-    title: "Queed platform",
-    description: "C'est la plateforme de gestion du startup Queed.",
-    image: "/projects/queed.png",
-    type: "website",
-    status: "production",
-    utils: ["Nextjs", "NextUi", "Tailwind", "Mongodb"]
-  },
-  {
-    title: "Pwatik",
-    description: "Modernisation d'une boutique en ligne pour une PME.",
-    image: "/projects/portfolio.png",
-    type: "website",
-    status: "closed",
-    utils: ["Javascript", "jQuery", "PHP", "HTML 5", "MySQL", "CSS 3"]
-  },
-  {
-    title: "Notebik",
-    description: "Système de messagerie instantané cross-platform",
-    image: "/projects/notebik.jpg",
-    type: "application",
-    status: "development",
-    utils: ["Dart/Flutter", "Rust", "ObjectBox"]
-  },
-  {
-    title: "Wilky Syndick Portfolio",
-    description: "Mon portfolio présentant mes travaux",
-    image: "/projects/portfolio.png",
-    type: "website",
-    status: "complete",
-    utils: ["Nextjs", "Radix Ui", "Aceternity", "Tailwind"]
-  }
-];
 
 function WebsitePreview({image, url} : {image: string, url?: string}){
   return (
-    <div className="flex flex-col overflow-hidden w-full h-full rounded-lg bg-slate-100">
-      <div className="flex justify-between px-4 py-2 items-center h-10">
-        <div className="w-[20px] h-[20px] bg-slate-200 rounded-full"/>
-        <div className="w-[50%] h-[20px] bg-slate-200 rounded-md"></div>
+    <div className="flex flex-col overflow-hidden w-full h-auto rounded-lg bg-slate-100">
+      <div className="flex justify-between px-4 py-2 items-center h-6">
+        <div className="w-[15px] h-[15px] bg-slate-200 rounded-full"/>
+        <div className="w-[50%] h-[15px] bg-slate-200 rounded-md"></div>
         <div className="flex gap-2">
-          <div className="w-[20px] h-[20px] bg-slate-200 rounded-full"/>
-          <div className="w-[20px] h-[20px] bg-slate-200 rounded-full"/>
-          <div className="w-[20px] h-[20px] bg-slate-200 rounded-full"/>
+          <div className="w-[15px] h-[15px] bg-slate-200 rounded-full"/>
+          <div className="w-[15px] h-[15px] bg-slate-200 rounded-full"/>
+          <div className="w-[15px] h-[15px] bg-slate-200 rounded-full"/>
         </div>
       </div>
-      <div className="w-full h-full overflow-y-auto">
+      <div className="w-full h-auto overflow-y-auto">
         <Image src={image} width={960} height={1600} alt=""/>
       </div>
     </div>
   )
+}
+function DesktopPreview({image} : {image: string}){
+    return (
+        <div className="flex flex-col overflow-hidden w-full h-auto rounded-lg bg-slate-100">
+            <div className="flex justify-between px-4 py-2 items-center h-5">
+                <div className="w-[10px] h-[10px] bg-slate-200 rounded-full"/>
+                <div className="flex gap-2">
+                    <div className="w-[10px] h-[10px] bg-slate-200 rounded-full"/>
+                    <div className="w-[10px] h-[10px] bg-slate-200 rounded-full"/>
+                    <div className="w-[10px] h-[10px] bg-slate-200 rounded-full"/>
+                </div>
+            </div>
+            <div className="w-full h-auto overflow-hidden">
+                <Image src={image} width={960} height={1600} alt=""/>
+            </div>
+        </div>
+    )
 }
 
 function ApplicationPreview({image}: {image: string}){
@@ -88,12 +64,13 @@ export default function Projects() {
   ];
   return (
     <section id="projects" className="w-full py-12 flex flex-col items-center gap-8">
-      <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-linear-120 from-orange-400 to-orange-600 bg-clip-text text-transparent">Mes projets récents</h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-white/80 bg-clip-text text-transparent">Mes projets récents</h2>
       <div className="flex flex-2/3 flex-col gap-2 md:flex-row w-full">
         <div className="flex flex-col w-full px-1 md:px-8">
             <div className={`w-full sticky top-10 ${currentProject.type == 'website' ? 'h-[25vh]' : 'h-[50vh]'} md:h-[70vh] flex justify-center`}>
               {currentProject.type == "website" && <WebsitePreview image={currentProject.image}/>}
               {currentProject.type == "application" && <ApplicationPreview image={currentProject.image}/>}
+              {currentProject.type == "desktop" && <DesktopPreview image={currentProject.image}/>}
             </div>
         </div>
         <Accordion className={"flex flex-1/3 flex-col gap-2 w-full max-w-5xl"}>
@@ -109,7 +86,7 @@ export default function Projects() {
                   </p>
                   <div className="flex p-2 flex-wrap gap-1">
                       {currentProject.utils.map((lang, index) => (
-                          <Chip color="success" variant={"solid"} className={`text-sm text-black ${colors[index % colors.length]}`}>{lang}</Chip>
+                          <Chip color="success" key={index} variant={"solid"} className={`text-sm text-black ${colors[index % colors.length]}`}>{lang}</Chip>
                       ))}
                   </div>
               </AccordionItem>

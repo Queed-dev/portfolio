@@ -1,0 +1,39 @@
+[
+  {
+    "period": "Novembre 2024 — À nos jours",
+    "position": "Enseignant en informatique chez Haiti EdTech",
+    "town": "Cap-Haïtien",
+    "responsibilities": [
+      "Préparer des cours appropriés.",
+      "Dispenser des cours d'informatique dans les établissements des différents partenaires de l’entreprise."
+    ]
+  },
+  {
+    "period": "Mars 2022 — Août 2024",
+    "position": "Assistant SAP à M.A.S Akansyel",
+    "town": "Caracol",
+    "responsibilities": [
+      "Gestion des stocks via le système ERP SAP (Systems, Applications, and Products)",
+      "Réconcilier le stock physique et le stock système afin d’éviter les écarts et les déficits financiers.",
+      "Superviser les audits de stock pour l’usine"
+    ]
+  },
+  {
+    "period": "Septembre 2020 — Mars 2021",
+    "position": "Assistant enseignant en programmation Python chez Royal Linx Team du Collège Saint-Joseph de Cap-Haïtien",
+    "town": "Cap-Haïtien",
+    "responsibilities": [
+      "Apporter des connaissances et compétences à l’équipe en programmation Python",
+      "Assister les étudiants dans leurs projets de programmation"
+    ]
+  },
+  {
+    "period": "Août 2018 — Octobre 2020",
+    "position": "Développeur web chez PwAtik",
+    "town": "Cap-Haïtien",
+    "responsibilities": [
+      "Apporter des connaissances et compétences à l’équipe en programmation Python",
+      "Assister les étudiants dans leurs projets de programmation"
+    ]
+  }
+]
